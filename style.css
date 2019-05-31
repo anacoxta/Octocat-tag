@@ -1,0 +1,87 @@
+/* MOCK CONTENT STYLING,
+NEEDED FOR THE EXAMPLE */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap');
+
+
+/* TAG STYLING */
+
+:root {
+--tag-bg: #ff6a67; /* tag color */
+--tag-highlight: white;
+--tag-txt: var(--tag-highlight);
+--tag-font: 'Roboto Slab', serif; /* page font */
+}
+
+
+#tag {
+font-family: var(--tag-font);
+font-size: 16px;
+position: fixed;
+top: 0;
+right: 0;
+height: 94px;
+width: 94px;
+}
+
+#tag-text {
+position: absolute;
+display: inline-block;
+background-color: var(--tag-bg);
+color: var(--tag-txt);
+width:auto;
+padding: 5px 10px 5px 18px;
+z-index:999;
+top: 35px;
+right: 74px;
+transform: scaleX(0);
+transform-origin: right;
+}
+
+/* animates the text tag */
+#tag:hover > :first-child ,
+#tag:focus-within > :first-child {
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: 600ms;
+}
+
+
+#tag-highlight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--tag-highlight);
+  width: 100%;
+  height: 100%;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* animates the text tag highlight */
+#tag:hover > :first-child > :first-child ,
+#tag:focus-within > :first-child > :first-child {
+  transform: scaleX(0.1);
+  transform-origin: left;
+  transition: 600ms;
+  transition-delay: 300ms;
+}
+
+/* #tag-octocat = svg */
+#tag-octocat {
+position: absolute;
+z-index: 1000;
+width: 64px;
+height: 64px;
+padding: 15px;
+top: 0;
+right: 0;
+}
+
+/* #octoLogo = path */
+#octoLogo {
+  fill: var(--tag-bg);
+}
+
+/* MOCK CONTENT STYLING, NEEDED FOR THE EXAMPLE (MINIFIED) */ body,html{height:auto;background:#39394e;background:linear-gradient(45deg,rgba(57,57,78,1) 0,rgba(57,67,78,1) 100%);background-attachment:fixed;margin:0;width:auto;font-family:'Roboto Slab',serif;display:flex;justify-content:center}.mock-content{width:85%;padding-bottom:40px}.mock-content p{line-height:1.8;padding:10px;color:rgb(136, 141, 146);background-color:#fff}.mock-content p span{color:rgba(57,67,78,1)}.mock-content a {color:#ff6a67;}.mock-content h1{display:inline-block;background-color:#fff;padding:10px;font-size:3rem;margin-bottom:0;line-height:1;color:#ff6a67}@media only screen and (min-width:850px){.mock-content{width:60%}}
+
+
